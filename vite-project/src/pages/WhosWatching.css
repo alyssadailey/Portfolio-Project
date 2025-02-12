@@ -1,0 +1,40 @@
+.whos-watching-container{
+  text-align: center;
+  height: 100vh; /
+  /* margin-top: 200px; */
+}
+
+h1 {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+.buttons-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.watching-button {
+  display: flex;
+  flex-direction: column; /* Stack image on top of text */
+  align-items: center;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.button-icon {
+  width: 150px; /* Adjust icon size */
+  height: 150px; /* Adjust icon size */
+  margin-bottom: 10px; /* Space between image and text */
+}
+.button-icon:hover {
+  background: white;
+  border: 3px solid #d0d0d0;
+}
+.button-text {
+  font-size: 1rem;
+  color: #6f6f6f;
+  text-transform: uppercase;
+}
