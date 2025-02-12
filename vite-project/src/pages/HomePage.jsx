@@ -2,7 +2,7 @@
 // import { createRoot } from 'react-dom/client'
 // import { useState } from 'react';
 import useSound from 'use-sound';
-import netflixSound from './assets/netflix-sound.mp3';
+import netflixSound from '/assets/nouveau-jingle-netflix.mp3';
 import './index.css';
 
 // import App from './App.jsx'
