@@ -18,21 +18,21 @@ const WhosWatching = () => {
 
             <div className="buttons-container">
                 <button className="watching-button" onClick={() => handleButtonClick('Employer')}>
-                <img src="/assets/Teal-NF-Icon.png" alt="Employer" className="button-icon" />
-                <p className="button-text">Employeer</p>
+                <img src="/assets/Teal-NF-Icon.png" alt="employer" className="button-icon" />
+                <p className="button-text">Employer</p>
                 </button>
 
-                <button className="watching-button" onClick={() => handleButtonClick('developer')}>
+                <button className="watching-button" onClick={() => handleButtonClick('Developer')}>
                 <img src="/assets/Pink-NF-Icon.png" alt="Developer" className="button-icon" />
                 <p className="button-text">Developer</p>
                 </button>
 
-                <button className="watching-button" onClick={() => handleButtonClick('friend')}>
+                <button className="watching-button" onClick={() => handleButtonClick('Friend')}>
                 <img src="/assets/Blue-NF-Icon.png" alt="Friend" className="button-icon" />
                 <p className="button-text">Friend</p>
                 </button>
 
-                <button className="watching-button" onClick={() => handleButtonClick('stranger')}>
+                <button className="watching-button" onClick={() => handleButtonClick('Stranger')}>
                 <img src="assets/Plumb-NF-Icon.png" alt="Stranger" className="button-icon" />
                 <p className="button-text">Stranger</p>
                 </button>

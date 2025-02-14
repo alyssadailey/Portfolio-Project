@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
+import './stylesheets/Navbar.css'
 
-const Header = () => {
+const Header = ({ userType }) => {
     return (
-        <header>
+        <header className="header">
+            <Navbar userType={userType} />
             <h1>My Portfolio</h1>
-            <Navbar />
         </header>
     );
 };

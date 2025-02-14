@@ -28,8 +28,8 @@ h1 {
   cursor: pointer;
 }
 .button-icon {
-  width: 135px; /* Adjust icon size */
-  height: 135px; /* Adjust icon size */
+  width: 132px; /* Adjust icon size */
+  height: 132px; /* Adjust icon size */
   margin-bottom: 10px; /* Space between image and text */
   border-radius: 3.5%;
 }
