@@ -1,0 +1,91 @@
+/* .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100vw; 
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 50px; 
+} */
+/* --------------------------------------------------------------------------------------- */
+/* .about-me-paragraph{
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-top: 50px;
+}
+
+.about-image{
+  width: 500px; 
+  height: 500px;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.browse-about-me-text{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.meet-alyssa-text{
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 4rem;
+    color: white;
+    margin-top: 20px;
+    margin-left: 600px;
+} */
+/* -------------------------------------------------------------------------------------- */
+.about-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 50px; /* Space between image and text */
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.image-container {
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.about-image {
+    width: 500px; 
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+.meet-alyssa-text {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 4rem;
+    color: white;
+    margin: 0; /* Removes extra margins */
+}
+
+.about-text {
+    margin-top: 20px; /* Adds spacing between the heading and paragraphs */
+}
+
+.about-me-paragraph {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-left: 150px;
+}
+
+.browse-about-me-text{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
