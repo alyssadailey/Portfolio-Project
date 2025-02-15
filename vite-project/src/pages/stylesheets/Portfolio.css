@@ -1,0 +1,61 @@
+/* .portfolio-container {
+    text-align: center;
+  } */
+  .carousel-projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+  
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project-card {
+    background-color: #222;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .project-card img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+
+  .browse-my-proj-txt{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
