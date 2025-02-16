@@ -1,5 +1,8 @@
 import React from "react";
 
+import "../components/stylesheets/Projects.css";
+
+
 // The project cards that will be displayed on the portfolio page
 const ProjectCard = ({ image, title, description, liveLink, githubLink }) => {
   return (

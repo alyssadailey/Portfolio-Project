@@ -11,35 +11,35 @@ const projects = [
     {
         image: "../assets/Your-Recipe-Box-img.png",
         title: "Your-Recipe-Box",
-        description: "Ipsum Lorium Ipsum Lorium",
+        description: "This digital recipe box application is an easy-to-use web app built with JavaScript, Bootstrap, and other web technologies, allowing users to store their favorite recipes digitally. It enables users to input ingredients, instructions, and categorize recipes for quick retrieval. The app offers a paperless solution to recipe storage, providing a clean and responsive user interface with Bootstrap while utilizing JavaScript for functionality and interactivity.",
         liveLink: "https://smoenter.github.io/Project-1/",
         githubLink: "https://github.com/smoenter/Project-1"
     },
     {
         image: "../assets/Build-Your-Ride-img.png",
         title: "Build-Your-Ride",
-        description: "Ipsum Lorium Ipsum Lorium",
+        description: "This application lets users create a new vehicle or choose from saved ones, then perform different actions based on the vehicle's capabilities. Trucks can check if they can tow another vehicle and complete the action if allowed. Built with a class-based structure, the app ensures reusability, maintainability, and accurate real-time feedback.",
         liveLink: "https://app.screencastify.com/v3/watch/nIoKANrJ2Y4QXmiHWhlc",
         githubLink: "https://github.com/alyssadailey/Build-Your-Ride"
     },
     {
         image: "../assets/README-O-MATIC-img.png",
         title: "README-O-MATIC",
-        description: "Ipsum Lorium Ipsum Lorium",
+        description: "README-O-MATIC is a Node.js application that guides users through a series of prompts about their project and automatically generates a well-structured, personalized README based on their responses. Built with JavaScript, it streamlines the documentation process, ensuring clarity and consistency for any project.",
         liveLink: "https://app.screencastify.com/v3/watch/WDT5ScFNWmW05fu5hHPb",
         githubLink: " https://github.com/alyssadailey/READMEO-MATIC"
     },
     {
         image: "../assets/Talent-Tracker-img.png",
         title: "Talent-Tracker",
-        description: "Ipsum Lorium Ipsum Lorium",
+        description: "This application is built using Node.js, MySQL, and Inquirer, allowing users to manage employees, roles, and departments in their company. It uses MySQL to store and retrieve data, while Inquirer facilitates interactive prompts for adding and updating records. The app features commands to view, add, and update employees, roles, and departments, promoting easy data management and reusability through class-based structures.",
         liveLink: "",
         githubLink: "https://github.com/alyssadailey/Talent-Tracker"
     },
     {
         image: "../assets/Prework-Study-Guide-img.png",
         title: "Prework-Study-Guide",
-        description: "Ipsum Lorium Ipsum Lorium",
+        description: "This was my very first page I ever coded! An application to help bootcamp students navigate, understand and study the four essential elements of front-end web development—Git, HTML, CSS, and JavaScript. Although not the prettiest of pages, it will always hold a special place in my heart, because this is where my journey started!", 
         liveLink: "file:///C:/Users/Alyss/bootcamp/prework-study-guide/index.html",
         githubLink: "https://github.com/alyssadailey/prework-study-guide"
     },

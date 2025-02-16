@@ -28,8 +28,8 @@ return (
     <div>
         <Header />
         <div className="contact-container">
-            <h1>Contact Me</h1>
-            <p>Feel free to reach out by filling out the form below!</p>
+            <h1>Contact Me:</h1>
+            <p>Have an idea or project you’d like to bring to life? I’d love to help!</p>
             <form onSubmit={handleSubmit} className="contact-form">
                 {/* handles displaying the contact form */}
                 <div className="input-group">
@@ -62,7 +62,7 @@ return (
                             required 
                         ></textarea>
                 </div>
-                <button type="submit" className="submit-btn">Send Message</button>
+                <button type="submit" className="submit-btn">Send your Message</button>
             </form>
         </div>
         <Footer />
