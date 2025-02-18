@@ -27,9 +27,21 @@ const handleSubmit = (e) => {
 return (
     <div>
         <Header />
+        <p className="contact-me-hook">Do you have an idea or project you’d like to bring to life?💡
+        </p>
+        <p className="contact-me-hook">
+            A project you would like to colab on?🛠️
+            </p>
+        <p className="contact-me-hook">
+            Or just want to create a fellow software-dev friend?☕❤️
+            </p>
+
+        
         <div className="contact-container">
+        
             <h1>Contact Me:</h1>
-            <p>Have an idea or project you’d like to bring to life? I’d love to help!</p>
+            
+            {/* <p className="contact-me-direct">Please fill out all fields:</p> */}
             <form onSubmit={handleSubmit} className="contact-form">
                 {/* handles displaying the contact form */}
                 <div className="input-group">
