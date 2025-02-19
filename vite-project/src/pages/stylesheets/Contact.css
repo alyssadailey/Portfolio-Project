@@ -8,6 +8,10 @@
     box-shadow: 0 0 15px rgb(209, 19, 19);
     text-align: center;
   }
+
+  .contact-content{
+    padding: 100px;
+  }
   
   .contact-container h1 {
     font-size: 26px;

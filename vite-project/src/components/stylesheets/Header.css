@@ -1,0 +1,49 @@
+.background-video {
+    position: absolute; /* Position it behind other elements */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures it fills the entire area */
+    z-index: -1; /* Puts the video behind everything */
+}
+.header {
+    position: relative; /* Ensures it's positioned above the video */
+    z-index: 2; /* Higher than -1 (the video), so it's visible */
+    color: white; /* Ensures text is visible on the video */
+    text-align: center;
+    padding: 20px;
+}
+
+.header-content {
+    /* position: relative; */
+    z-index: 2; /* Makes sure it's above the video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Makes it centered vertically */
+}
+
+.header-buttons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+}
+
+.resume-btn, .linkedin-btn {
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.resume-btn .play-icon, .linkedin-btn .linkedin-icon {
+    font-size: 20px;
+}

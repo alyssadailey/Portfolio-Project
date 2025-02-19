@@ -5,11 +5,17 @@ export const UserContext = createContext(null);
 
 // UserProvider Component
 export const UserProvider = ({ children }) => {
-    const [userType, setUserType] = useState(localStorage.getItem("userType") || "default");
+    const [userType, setUserType] = useState(() => {
+        const savedUser = localStorage.getItem("userType");
+        return savedUser || "Default";
+    });
 
     // Save userType to localStorage when it changes
     useEffect(() => {
-        localStorage.setItem("userType", userType);
+        if (userType) {
+            console.log("Saving userType:", userType);
+            localStorage.setItem("userType", userType);
+        }
     }, [userType]);
 
     return (

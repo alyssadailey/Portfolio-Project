@@ -11,7 +11,7 @@ const projects = [
     {
         image: "../assets/Your-Recipe-Box-img.png",
         title: "Your-Recipe-Box",
-        description: "This digital recipe box application is an easy-to-use web app built with JavaScript, Bootstrap, and other web technologies, allowing users to store their favorite recipes digitally. It enables users to input ingredients, instructions, and categorize recipes for quick retrieval. The app offers a paperless solution to recipe storage, providing a clean and responsive user interface with Bootstrap while utilizing JavaScript for functionality and interactivity.",
+        description: "This digital recipe box application is an easy-to-use web app built with JavaScript, Bootstrap, and other web technologies, allowing users to store their favorite recipes digitally. The app offers a paperless solution to recipe storage, providing a clean and responsive user interface with Bootstrap while utilizing JavaScript for functionality and interactivity.",
         liveLink: "https://smoenter.github.io/Project-1/",
         githubLink: "https://github.com/smoenter/Project-1"
     },
@@ -32,7 +32,7 @@ const projects = [
     {
         image: "../assets/Talent-Tracker-img.png",
         title: "Talent-Tracker",
-        description: "This application is built using Node.js, MySQL, and Inquirer, allowing users to manage employees, roles, and departments in their company. It uses MySQL to store and retrieve data, while Inquirer facilitates interactive prompts for adding and updating records. The app features commands to view, add, and update employees, roles, and departments, promoting easy data management and reusability through class-based structures.",
+        description: "This Node.js application uses MySQL and Inquirer to manage your companies data on current employees, roles, and departments. It enables users to view, add, and update records through interactive prompts, ensuring efficient data management with a class-based structure.",
         liveLink: "",
         githubLink: "https://github.com/alyssadailey/Talent-Tracker"
     },

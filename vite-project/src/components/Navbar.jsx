@@ -3,17 +3,21 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import "../components/stylesheets/Navbar.css";
 
+// sets the correct icon to the correct user
 const userIcons = {
   Employer: "/assets/Teal-NF-Icon.png",
   Developer: "/assets/Pink-NF-Icon.png",
   Friend: "/assets/Blue-NF-Icon.png",
   Stranger: "/assets/Plumb-NF-Icon.png",
-  default: "/assets/Default-img.webp",
+  Default: "/assets/Default-img.webp",
 };
 
 const Navbar = () => {
   const { userType } = useContext(UserContext);
-    const userIcon = userIcons[userType] || userIcons.default; // Select correct icon
+  console.log("Navbar detected userType:", userType);
+
+    const displayUser = userType || "Default"
+    const userIcon = userIcons[userType] || userIcons.Default; 
 
     return (
       <nav className="nav">
@@ -27,7 +31,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/resume">Resume</Link>
             <Link className="nav-link" to="/contact">Contact me</Link>
         </div>
-        <h2 className="welcome-msg-nav">Welcome, {userType}!</h2>
+        <h2 className="welcome-msg-nav">Welcome, {displayUser}!</h2>
         <Link to="/whoswatching" className="whos-watching-icon">
             <img src={userIcon} alt="User's Who's Watching Icon" className="whos-watching-img" />
           </Link>

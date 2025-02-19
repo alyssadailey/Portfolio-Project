@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 import './stylesheets/WhosWatching.css';
 
 const WhosWatching = () => {
     // initializes navigate function
     const navigate = useNavigate();
+    const { setUserType } = useContext(UserContext);
 // navigates the user to the dashboard after selecting what user they are
     const handleButtonClick = (usertype) => {
+        setUserType(usertype);
+        localStorage.setItem("userType", usertype);
         navigate(`/dashboard/${usertype}`);
     };
 
