@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../components/Navbar";
+import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer";
 import SkillCard from "../components/SkillCard";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaBootstrap } from "react-icons/fa";
@@ -38,7 +38,7 @@ const Resume = () => {
     return (
         <div>
             {/* displays header and navbar */}
-            <Header />
+            <Navbar />
             {/* <Header /> */}
             {/* Resume button section */}
             <div className="resume-section">

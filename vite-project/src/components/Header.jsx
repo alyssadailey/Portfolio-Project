@@ -5,43 +5,36 @@ import { FaPlay } from 'react-icons/fa';
 import './stylesheets/Navbar.css'
 import aboutVideo from "/assets/About-Video.mp4";
 import portfolioVideo from "/assets/Portfolio-Video-4.mp4";
-import resumeVideo from "/assets/Portfolio-Video-2.mp4"
+// import resumeVideo from "/assets/Portfolio-Video-2.mp4"
 
 import "../components/stylesheets/Header.css";
 
 const pageDetails = {
 '/about' : {
     title: 'About Me',
-    description: 'On this page, you will get to know me! Learn why I chose software-development, what pushes me to be the best developer I possibly can be, and what I enjoy to do in my free time.',
+    description: 'In a world driven by innovation, Alyssa Dailey stands at the crossroads of creativity and technology. On this page, dive into her journey—how a childhood spent in data centers with her IT-savvy dad sparked a lifelong passion for software development. Discover what fuels her relentless drive to master her craft, the challenges she’s conquered along the way, and the vision that pushes her forward. But coding isn’t her only passion—when she’s not crafting sleek applications, she’s embracing the moments that inspire her most. Whether it’s problem-solving, building meaningful projects, or finding new ways to bring ideas to life, this is your chance to get to know the developer behind the screen.',
     video: aboutVideo,
 },
 '/portfolio' : {
     title: 'Portfolio',
-    description: 'Browse my projects here',
+    description: 'Step into a world of problem-solving, creativity, and cutting-edge code. This is more than just a collection of projects—it’s a showcase of passion, perseverance, and the skills that bring ideas to life. From dynamic web applications to immersive experiences, each project tells a story of growth, challenges overcome, and the drive to build something meaningful. Whether you\'re here to explore technical expertise, seek inspiration, or find the right developer for your next big idea, this portfolio is your front-row seat to the work that defines Alyssa Dailey.',
     video: portfolioVideo,
-},
-'/resume' : {
-    title: 'Resume',
-    description: 'Browse my resume and skills here',
-    video: resumeVideo,
 },
 };
 
 const Header = ({ userType }) => {
 
     const location = useLocation();
-    const { title, description, video } = pageDetails[location.pathname] || {
-        title: "Welcome",
-        description: "Explore my page",
-        video: aboutVideo,
-    };
+
+    const currentPageDetails = pageDetails[location.pathname] || pageDetails["/about"];
+    
 
     return (
         <header className="header">
 
             {/* displays dynamic videos */}
             <video autoPlay loop muted className="background-video">
-                <source src={video} type="video/mp4" />
+                <source src={currentPageDetails.video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
@@ -50,9 +43,9 @@ const Header = ({ userType }) => {
 
             {/* Header Content */}
             <div className="header-content">
-                <h1 className="header-title">The Alyssa Show</h1>
-                <h2 className="page-title">{title}</h2>
-                <p className="page-description">{description}</p>
+                <h1 className="header-title">{currentPageDetails.title}</h1>
+                <h2 className="page-title">The Alyssa Show</h2>
+                <p className="page-description">{currentPageDetails.description}</p>
 
             {/* Button */}
                 <div className="header-buttons">
