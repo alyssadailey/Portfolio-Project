@@ -10,9 +10,12 @@ const HomePage = () => {
   const navigate = useNavigate();
 // play element to refrence sound file we want to play
   const [play] = useSound(netflixSound);
+// initiates animations on text
+  const [animate, setAnimate] = useState(false);
 
   // sound will play at click
   const handleClick = () => {
+    setAnimate(true);
     play();
     setTimeout(()=>{
       navigate("/WhosWatching")
@@ -21,7 +24,7 @@ const HomePage = () => {
   // Displays my name in home page, and allows the functionality of the click to work anywhere on the page
   return (
     <div className="home-page" onClick={handleClick}>
-      <h1 className="netflix-title">Alyssa Dailey</h1>
+      <h1 className={`netflix-title ${animate ? "animate-text" : ""}`}>Alyssa Dailey</h1>
       </div>
     
   );

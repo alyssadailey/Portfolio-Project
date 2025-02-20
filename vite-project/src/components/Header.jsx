@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from 'react-router-dom';
 import Navbar from "./Navbar";
 import { FaPlay } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import './stylesheets/Navbar.css'
 import aboutVideo from "/assets/About-Video.mp4";
 import portfolioVideo from "/assets/Portfolio-Video-4.mp4";
@@ -50,10 +51,10 @@ const Header = ({ userType }) => {
             {/* Button */}
                 <div className="header-buttons">
                     <a href="/assets/Alyssa-SWD-Resume.pdf" download="Alyssa_Dailey_Resume" className="resume-btn">
-                        <FaPlay className="play-icon"/>
+                        <FaPlay className="play-icon"/> Resume
                     </a>
                     <a href="https://www.linkedin.com/in/alyssa-dailey/" target="_blank" rel="noopener noreferrer" className="linkedin-btn">
-                        <FaPlay className="linkedin-icon"/>
+                        <FaLinkedin className="linkedin-icon" /> LinkedIn
                     </a>
                 </div>
             </div>

@@ -23,7 +23,18 @@
     align-items: start;
     justify-content: center;
     height: 100vh; /* Makes it centered vertically */
+    
 }
+
+.page-description {
+    font-size: medium;
+    font-weight: bold;
+        max-width: 50%; /* Restrict text width */
+        text-align: left; /* Ensure text aligns left */
+    
+}
+
+/* Resume and Linked in buttons */
 
 .header-buttons {
     position: relative;
@@ -32,22 +43,40 @@
     gap: 20px;
 }
 
-.page-description {
-    font-size: large;
-}
-
 .resume-btn, .linkedin-btn {
-    background-color: red;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    font-size: 16px;
+    border: 2px solid transparent; /* Helps with hover effect */
+    transition: all 0.3s ease-in-out;
 }
 
+/* Resume button */
+.resume-btn {
+    background-color: rgba(255, 254, 254, 0.856); /* Translucent white */
+    color: black;
+}
+
+.resume-btn:hover {
+    background-color: rgba(211, 210, 210, 0.612); /* Slightly less transparent on hover */
+}
+
+/* linkedin button */
+.linkedin-btn {
+    background-color: rgba(255, 255, 255, 0.37); /* Translucent grey */
+    color: white;
+}
+
+.linkedin-btn:hover {
+    background-color: rgba(128, 128, 128, 0.5); /* Slightly less transparent on hover */
+}
+
+/* icons on buttons styled here */
 .resume-btn .play-icon, .linkedin-btn .linkedin-icon {
     font-size: 20px;
 }

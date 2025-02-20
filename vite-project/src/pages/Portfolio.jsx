@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectCard from "../components/Projects";
@@ -33,7 +33,7 @@ const projects = [
         image: "../assets/Talent-Tracker-img.png",
         title: "Talent-Tracker",
         description: "This Node.js application uses MySQL and Inquirer to manage your companies data on current employees, roles, and departments. It enables users to view, add, and update records through interactive prompts, ensuring efficient data management with a class-based structure.",
-        liveLink: "",
+        liveLink: "https://www.loom.com/share/8792f69c18c0474aacae25c93e1671fd?sid=4aab42e9-cee3-4b51-b7b5-780044a8a35f",
         githubLink: "https://github.com/alyssadailey/Talent-Tracker"
     },
     {
@@ -46,11 +46,19 @@ const projects = [
     {
         image: "../assets/Build-Your-Ride-img.png",
         title: "Weather-Buddy",
-        description: "Ipsum Lorium Ipsum Lorium",
-        liveLink: "https://app.screencastify.com/v3/watch/nIoKANrJ2Y4QXmiHWhlc",
-        githubLink: "https://github.com/alyssadailey/Build-Your-Ride"
+        description: "This project is currently under construction still. This application will leverage a weather API to provide real-time weather updates for any city in the U.S. Users can simply enter a city name, and the app will display current conditions, temperature, humidity, and more. Stay tuned! Will be uploaded soon!",
+        liveLink: "",
+        githubLink: "https://github.com/alyssadailey/Weather-Buddy"
     },
 ];
+
+const shuffleArray = (array) => {
+    return array
+    .map((item) => ({ item, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ item }) => item);
+};
+
 // creates a chunk of projects to be displayed in the carousel at a time
 const chunkProjects = (projects, chunkSize) => {
     let chunks = [];
@@ -60,16 +68,62 @@ const chunkProjects = (projects, chunkSize) => {
     return chunks;
 };
 
+// main portfolio component
 const Portfolio = () => {
-    const projectChunks = chunkProjects(projects, 3);
+    const [shuffledProjectChunks, setShuffledProjectChunks] = useState({
+        browseAll: [],
+        loveThese: [],
+        continueWatching: []
+    });
+
+// Shuffle projects separately for each carousel when component mounts
+useEffect(() => {
+    setShuffledProjectChunks({
+        browseAll: chunkProjects(shuffleArray([...projects]), 3),
+        loveThese: chunkProjects(shuffleArray([...projects]), 3),
+        continueWatching: chunkProjects(shuffleArray([...projects]), 3),
+    });
+}, []);
     return (
         <div className="portfolio-container">
 
             <Header />
-            <h1 className="browse-my-proj-txt">We think you will love these projects:</h1>
+            {/* Browse all projects carousel */}
+            <h1 className="browse-my-proj-txt">Browse all projects</h1>
 
             <Carousel interval={null}> {/* Disables auto-swiping */}
-                {projectChunks.map((chunk, index) => (
+                {shuffledProjectChunks.browseAll.map((chunk, index) => (
+                    <Carousel.Item key={index}>
+                        <div className="carousel-projects">
+                            {chunk.map((project, idx) => (
+                                <ProjectCard key={idx} {...project} />
+                            ))}
+                        </div>
+                    </Carousel.Item>
+                ))}
+                
+            </Carousel>
+
+            {/* We think you'll love these projects carousel */}
+            <h1 className="browse-my-proj-txt">We think you will love these projects</h1>
+
+            <Carousel interval={null}> {/* Disables auto-swiping */}
+                {shuffledProjectChunks.loveThese.map((chunk, index) => (
+                    <Carousel.Item key={index}>
+                        <div className="carousel-projects">
+                            {chunk.map((project, idx) => (
+                                <ProjectCard key={idx} {...project} />
+                            ))}
+                        </div>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+
+            {/* continue watching carousel */}
+            <h1 className="browse-my-proj-txt">Continue watching</h1>
+
+            <Carousel interval={null}> {/* Disables auto-swiping */}
+                {shuffledProjectChunks.continueWatching.map((chunk, index) => (
                     <Carousel.Item key={index}>
                         <div className="carousel-projects">
                             {chunk.map((project, idx) => (

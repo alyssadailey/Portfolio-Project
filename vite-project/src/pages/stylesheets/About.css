@@ -1,4 +1,5 @@
 
+
 .about-container {
     display: flex;
     align-items: center; /* Aligns items vertically */
@@ -42,7 +43,9 @@
     font-family: 'Be Vietnam Pro', sans-serif;
     margin-top: 50px;
     max-width: 1000px;
-    margin-left: 150px;
+    text-align: center; /* Centers text inside the paragraph */
+    margin-left: auto;
+    margin-right: auto; /* Centers the entire paragraph */
 }
 
 
