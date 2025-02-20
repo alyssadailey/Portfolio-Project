@@ -5,7 +5,7 @@ import { FaPlay } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import './stylesheets/Navbar.css'
 import aboutVideo from "/assets/About-Video.mp4";
-import portfolioVideo from "/assets/Portfolio-Video-4.mp4";
+import portfolioVideo from "/assets/Portfolio-Video-2.mp4";
 // import resumeVideo from "/assets/Portfolio-Video-2.mp4"
 
 import "../components/stylesheets/Header.css";

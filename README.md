@@ -2,7 +2,7 @@
 
 ## Description
 
-The motivation for this project, was to create a user friendly application that allows users to either create a new car, or select a pre-existing saved vehicle, and preform various different actions on the vehicle. While the user is performing the actions on the car, the application will accurately display responses, depending on the users vehical capabilities. This application allows trucks to easily verify if they are able to tow another vehicle, and will successfully tow a vehicle if permissible. Throughout the making of this application, I was able to better understand how the use of classes can be used to define properties and methods that can be reused throughout my application, promoting code reusability and maintainability.
+
 
 
 ## Table of Contents (Optional)
@@ -38,6 +38,14 @@ The resume page displays a button allowing the user to download and view my resu
 The contact me page displays a form that allows users to send me a personalized message with their name and email.
 
 ## Credits
+
+-Page login sound: https://www.myinstants.com/en/index/us/
+
+- Header videos: https://www.pexels.com/
+
+-"About me" girl avatar photo: https://www.freepik.com/
+
+- Download Resume button- https://dev.to/webdeasy/top-20-css-buttons-animations-f41  author of code: Alex Bodin
 
 Used Xpert Learning Assistance and ChatGBT to assist me in answering any questions I had throughout this project.
 
