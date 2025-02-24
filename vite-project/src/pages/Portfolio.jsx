@@ -52,6 +52,7 @@ const projects = [
     },
 ];
 
+// shuffles the projects array to display in a random order
 const shuffleArray = (array) => {
     return array
     .map((item) => ({ item, sort: Math.random() }))
@@ -86,11 +87,12 @@ useEffect(() => {
 }, []);
     return (
         <div className="portfolio-container">
-
+            {/* displays header and nav */}
             <Header />
+
             {/* Browse all projects carousel */}
             <h1 className="browse-my-proj-txt">Browse all projects</h1>
-
+            {/* Carousel allows user to use arrows to scroll through projects */}
             <Carousel interval={null}> {/* Disables auto-swiping */}
                 {shuffledProjectChunks.browseAll.map((chunk, index) => (
                     <Carousel.Item key={index}>
@@ -133,7 +135,8 @@ useEffect(() => {
                     </Carousel.Item>
                 ))}
             </Carousel>
-
+                
+            {/* Footer */}  
             <Footer />
 
         </div>

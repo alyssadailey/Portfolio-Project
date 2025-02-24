@@ -19,6 +19,7 @@ const iconMap= {
   "NPM": <FaNpm />,
 };
 
+// maps the skills to the skill card with icon
 const SkillCard = ({ skill, Icon }) => {
     return (
         <div className="skill-card">

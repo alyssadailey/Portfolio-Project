@@ -7,10 +7,10 @@ import Footer from "../components/Footer";
 const About = () => {
     return (
         <div>
-            {/* <Navbar /> */}
+            {/* <Navbar /> and header */}
             <Header />
             <h1 className="browse-about-me-text">Browse the "About Me" page:</h1>
-            
+            {/* displays avatar */}
             <div className="about-container">
             <div className="image-container">
             <img src="../assets/3d-illustration-cute-cartoon-girl-with-red-backpack.jpg" alt="About Alyssa" className="about-image" />
@@ -21,7 +21,7 @@ const About = () => {
             {/* <h2 className="meet-alyssa-text">Meet Alyssa,the dev behind it all!</h2> */}
             </div>
             </div>
-
+            {/* get to know me paragraphs */}
             <div className="about-text">
             <p className="about-me-paragraph">
             Hi! I'm Alyssa, a passionate and driven full-stack software developer! My love for coding can certainly be credited to my Dad, who has worked in IT since I was little. Some of my earliest tech-related memories are of late-night trips to data centers with my Dad while he was on call. I was always mesmerized by the hum of the machines, the glow of flashing lights, and the sheer complexity of it all. I used to think that following in my dad's footsteps wasn’t the right path for me, but as I grew older, I realized how much I was drawn to the world of technology.
@@ -34,6 +34,7 @@ const About = () => {
             </p>
 
             </div>
+            {/* Footer */}
             <Footer />
         </div>
     );

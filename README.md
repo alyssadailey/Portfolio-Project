@@ -92,7 +92,19 @@ Used Xpert Learning Assistance and ChatGBT to assist me in answering any questio
 
 ## Features
 
-N/a
+🎬 Cinematic Intro – The homepage displays my name in the Netflix font, and clicking anywhere triggers the Netflix login sound and animation, creating an immersive experience.
+
+👤 Who’s Watching? – Users are presented with a profile selection screen, featuring Netflix-style user icons, allowing them to choose their visitor type (Recruiter, Developer, Friend, Stranger).
+
+🔗 Dynamic Navigation – After selection, users land on an About Me page with a Netflix-inspired UI and a fully functional navbar for seamless navigation.
+
+💼 Portfolio Showcase – A dedicated section featuring my best projects, complete with interactive previews and descriptions.
+
+📄 Downloadable Resume – Users can view and download my resume with a single click.
+
+✉️ Contact Form – A custom Contact Me form that allows visitors to send personalized messages directly to me.
+
+⚡ Reusable Components – The site is built with React and Bootstrap, utilizing modular and reusable components for maintainability and scalability.
 
 ## Questions
 

@@ -10,6 +10,7 @@ import portfolioVideo from "/assets/Portfolio-Video-2.mp4";
 
 import "../components/stylesheets/Header.css";
 
+// sets the title, description, and video for each page
 const pageDetails = {
 '/about' : {
     title: 'About Me',
@@ -23,6 +24,7 @@ const pageDetails = {
 },
 };
 
+// uses the location to determine which page to display
 const Header = ({ userType }) => {
 
     const location = useLocation();
@@ -48,7 +50,7 @@ const Header = ({ userType }) => {
                 <h2 className="page-title">The Alyssa Show</h2>
                 <p className="page-description">{currentPageDetails.description}</p>
 
-            {/* Button */}
+            {/* Resume and linked in Buttons */}
                 <div className="header-buttons">
                     <a href="/assets/Alyssa-SWD-Resume.pdf" download="Alyssa_Dailey_Resume" className="resume-btn">
                         <FaPlay className="play-icon"/> Resume

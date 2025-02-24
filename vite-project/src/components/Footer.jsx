@@ -6,9 +6,7 @@ const Footer = () => {
     return (
         <div className="footer-container">
          <footer className="footer">
-            {/* <h2>Got a project in mind?</h2>
-            <h1>Let's connect</h1>
-            <button className="write-msg-btn">Write a message</button>  */}
+        {/* displays message and links to socials */}
             <p className="footer-text">FEEL FREE TO CONNECT WITH ME ON SOCIALS</p>
             <div className="social-links">
             <Link to="https://github.com/alyssadailey" className="social-link">GITHUB</Link>

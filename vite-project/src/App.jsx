@@ -1,19 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import React, { useState } from "react";
 import { UserProvider } from "./context/UserContext";
 import HomePage from "./pages/HomePage";
 import WhosWatching from "./pages/WhosWatching";
-import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 
-
-
-
+// imports the routes for pages
+// imports the context provider for user
 const App = () => {
   return (
     <UserProvider>

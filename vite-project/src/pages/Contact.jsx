@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import './stylesheets/Contact.css';
 
+// Creates Contact form function
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
@@ -26,10 +27,12 @@ const Contact = () => {
     
     const handleBlur = (e) => {
         const { name, value } = e.target
-
+        
+        // checks if field is empty
         if(!value.trim()) {
             setErrors({ ...errors, [name]: "This field is required"});
         } 
+        // checks if email is valid
         else if (name === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
             setErrors({ ...errors, email: "Please enter a valid email address" });
         }
@@ -52,18 +55,21 @@ const handleSubmit = (e) => {
     if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
         newErrors.email = "Please enter a valid email address";
     }
-
+    // if there are aditional errors, set them
     if (Object.keys(newErrors).length > 0) {
         setErrors(newErrors);
         return;
     }
+    // if no errors, alert user that message was sent
     alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
     setFormData({ name: "", email: "", message: "" });
 };
 
 return (
     <div>
+        {/* navbar */}
         <Navbar />
+        {/* hook questions */}
         <div className="contact-content">
         <p className="contact-me-hook">Do you have an idea or project you’d like to bring to life?💡
         </p>
@@ -74,7 +80,7 @@ return (
             Or just want to create a fellow software-dev friend?☕❤️
             </p>
 
-        
+        {/* contact form created here */}
         <div className="contact-container">
         
             <h1>Contact Me:</h1>
@@ -83,6 +89,7 @@ return (
             <form onSubmit={handleSubmit} className="contact-form">
                 {/* handles displaying the contact form */}
                 <div className="input-group">
+                    {/* name field */}
                     <label>Name</label>
                     <input 
                             type="text" 
@@ -96,6 +103,7 @@ return (
                  </div>
 
                 <div className="input-group">
+                    {/* email field */}
                 <label>Email</label>
                         <input 
                             type="email" 
@@ -107,7 +115,7 @@ return (
                         />
                         {errors.email && <span className="error">{errors.email}</span>}
                 </div>
-
+                {/* message field */}
                 <div className="input-group">
                         <label>Message</label>
                         <textarea 
@@ -120,10 +128,12 @@ return (
                         ></textarea>
                         {errors.message && <span className="error">{errors.message}</span>}
                 </div>
+                {/* submit form button */}
                 <button type="submit" className="submit-btn">Send your Message</button>
             </form>
         </div>
         </div>
+        {/* footer */}
         <Footer />
     </div>
 );

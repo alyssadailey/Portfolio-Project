@@ -37,19 +37,19 @@ const skills = {
 const Resume = () => {
     return (
         <div>
-            {/* displays header and navbar */}
+            {/* displays navbar */}
             <Navbar />
-            {/* <Header /> */}
-            {/* Resume button section */}
+            {/* Resume section */}
             <div className="resume-section">
             <div>
             <h2 className="resume-text">Resume</h2>
+            
             <p className="click-btn-text">Click to download my resume:</p>
+            {/* Download Resume button */}
             <a 
             href= "/assets/Alyssa-SWD-Resume.pdf"
             download= "Alyssa_Dailey_Resume"
             class="animated-button1">
-            {/* className= "btn btn-primary"> */}
                 <span></span>
                 <span></span>
                 <span></span>
@@ -62,13 +62,16 @@ const Resume = () => {
             <h2 className="skills-text">Skills</h2>
             {/* Loop through skill categories */}
             {Object.entries(skills).map(([category, skillList]) => (
+            // Loop through each skill category
           <div key={category} className="skill-category">
             <h3 className="category-title">{category}</h3>
+      
             <div className="skills-container">
               {skillList.map(({name, icon}, index) => (
                 <SkillCard key={index} skill={name} Icon={icon} />
               ))}
             </div>
+            
           </div>
         ))}
         </div>
