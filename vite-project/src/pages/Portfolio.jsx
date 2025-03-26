@@ -16,6 +16,13 @@ const projects = [
         githubLink: "https://github.com/smoenter/Project-1"
     },
     {
+        image: "../assets/Call-of-Coding.png",
+        title: "Call of Coding",
+        description: "An interactive coding game that allows users to choose a themed coding game to play. Each mission displays questions to teach players about JavaScript concepts. The players are timed and able to keep track of their score while playing. Users are able to view the leaderboard which displays the stats of the top players. The game is built using HTML, CSS, Vite, TypeScript",
+        liveLink: " https://call-of-coding-8hvx.onrender.com",
+        githubLink: "https://github.com/taijamartinez/call_of_coding"
+    },
+    {
         image: "../assets/Build-Your-Ride-img.png",
         title: "Build-Your-Ride",
         description: "This application lets users create a new vehicle or choose from saved ones, then perform different actions based on the vehicle's capabilities. Trucks can check if they can tow another vehicle and complete the action if allowed. Built with a class-based structure, the app ensures reusability, maintainability, and accurate real-time feedback.",
@@ -43,13 +50,13 @@ const projects = [
         liveLink: "file:///C:/Users/Alyss/bootcamp/prework-study-guide/index.html",
         githubLink: "https://github.com/alyssadailey/prework-study-guide"
     },
-    {
-        image: "../assets/Build-Your-Ride-img.png",
-        title: "Weather-Buddy",
-        description: "This project is currently under construction still. This application will leverage a weather API to provide real-time weather updates for any city in the U.S. Users can simply enter a city name, and the app will display current conditions, temperature, humidity, and more. Stay tuned! Will be uploaded soon!",
-        liveLink: "",
-        githubLink: "https://github.com/alyssadailey/Weather-Buddy"
-    },
+    // {
+    //     image: "../assets/Build-Your-Ride-img.png",
+    //     title: "Weather-Buddy",
+    //     description: "This project is currently under construction still. This application will leverage a weather API to provide real-time weather updates for any city in the U.S. Users can simply enter a city name, and the app will display current conditions, temperature, humidity, and more. Stay tuned! Will be uploaded soon!",
+    //     liveLink: "",
+    //     githubLink: "https://github.com/alyssadailey/Weather-Buddy"
+    // },
 ];
 
 // shuffles the projects array to display in a random order
