@@ -47,7 +47,7 @@ const Resume = () => {
             <p className="click-btn-text">Click to download my resume:</p>
             {/* Download Resume button */}
             <a 
-            href= "/assets/Alyssa-SWD-Resume.pdf"
+            href= "/assets/Alyssa-Resume.pdf"
             download= "Alyssa_Dailey_Resume"
             class="animated-button1">
                 <span></span>

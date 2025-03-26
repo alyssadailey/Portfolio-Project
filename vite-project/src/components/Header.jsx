@@ -52,7 +52,7 @@ const Header = ({ userType }) => {
 
             {/* Resume and linked in Buttons */}
                 <div className="header-buttons">
-                    <a href="/assets/Alyssa-SWD-Resume.pdf" download="Alyssa_Dailey_Resume" className="resume-btn">
+                    <a href="/assets/Alyssa-Resume.pdf" download="Alyssa_Dailey_Resume" className="resume-btn">
                         <FaPlay className="play-icon"/> Resume
                     </a>
                     <a href="https://www.linkedin.com/in/alyssa-dailey/" target="_blank" rel="noopener noreferrer" className="linkedin-btn">

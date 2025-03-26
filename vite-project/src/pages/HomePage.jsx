@@ -21,6 +21,7 @@ const HomePage = () => {
       navigate("/WhosWatching")
     }, 4100);
   };
+  
   // Displays my name in home page, and allows the functionality of the click to work anywhere on the page
   return (
     <div className="home-page" onClick={handleClick}>
