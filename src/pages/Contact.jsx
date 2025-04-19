@@ -41,6 +41,8 @@ const Contact = () => {
 
 
 const handleSubmit = (e) => {
+
+    
     e.preventDefault();
 
     // checks if all fields are filled out
@@ -61,8 +63,18 @@ const handleSubmit = (e) => {
         return;
     }
     // if no errors, alert user that message was sent
-    alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData })
+      })
+        .then(() =>{
+            alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
     setFormData({ name: "", email: "", message: "" });
+        })
+        .catch(error => alert(error));
+
+    
 };
 
 return (
