@@ -66,7 +66,7 @@ const handleSubmit = (e) => {
     fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formData })
+        body: JSON.stringify({ "form-name": "contact", ...formData })
       })
         .then(() =>{
             alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
