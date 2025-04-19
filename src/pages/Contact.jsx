@@ -86,7 +86,8 @@ return (
             <h1>Contact Me:</h1>
             
             {/* <p className="contact-me-direct">Please fill out all fields:</p> */}
-            <form onSubmit={handleSubmit} className="contact-form" netlify>
+            <form onSubmit={handleSubmit} className="contact-form">
+            <input type="hidden" name="form-name" value="contact" />
                 {/* handles displaying the contact form */}
                 <div className="input-group">
                     {/* name field */}
