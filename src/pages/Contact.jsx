@@ -14,6 +14,7 @@ const Contact = () => {
         name: "",
         email: "",
         message: "",
+        "form-name": "contact",
     });
 
     // Handles input changes
@@ -62,11 +63,17 @@ const handleSubmit = (e) => {
         setErrors(newErrors);
         return;
     }
+
+    let body = "form-name=contact&";
+    for (const field in formData) {
+       // URL encode the form data for each field
+        body += `${encodeURIComponent(field)}=${encodeURIComponent(formData[field])}&`;
+    }
     // if no errors, alert user that message was sent
     fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: JSON.stringify({ "form-name": "contact", ...formData })
+        body: body,
       })
         .then(() =>{
             alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
@@ -99,7 +106,7 @@ return (
             
             {/* <p className="contact-me-direct">Please fill out all fields:</p> */}
             <form onSubmit={handleSubmit} className="contact-form">
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value={formData["form-name"]} />
                 {/* handles displaying the contact form */}
                 <div className="input-group">
                     {/* name field */}
