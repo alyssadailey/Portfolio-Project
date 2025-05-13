@@ -1,14 +1,16 @@
 import React from 'react';
-// import Navbar from "../components/Navbar";
 import Header from "../components/Header.jsx"
-import './stylesheets/About.css';
 import Footer from "../components/Footer";
+import './stylesheets/About.css';
 
+// about me page component
 const About = () => {
     return (
         <div>
-            {/* <Navbar /> and header */}
+            {/* header- displays nav */}
             <Header />
+            {/* ABOUT ME PAGE MAIN CONTENT SECTION */}
+            <section>
             <h1 className="browse-about-me-text">Browse the "About Me" page:</h1>
             {/* displays avatar */}
             <div className="about-container">
@@ -18,7 +20,6 @@ const About = () => {
 
             <div className="about-text">
             <h2 className="meet-alyssa-text">Meet Alyssa, the dev behind it all!</h2>
-            {/* <h2 className="meet-alyssa-text">Meet Alyssa,the dev behind it all!</h2> */}
             </div>
             </div>
             {/* get to know me paragraphs */}
@@ -34,6 +35,8 @@ const About = () => {
             </p>
 
             </div>
+            </section>
+
             {/* Footer */}
             <Footer />
         </div>

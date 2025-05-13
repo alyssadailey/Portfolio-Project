@@ -4,12 +4,16 @@ import { UserContext } from "../context/UserContext";
 import './stylesheets/WhosWatching.css';
 
 const WhosWatching = () => {
-    // initializes navigate function
+    // initializes navigate function to use useNavigate to nav to correct page after user type is selected
     const navigate = useNavigate();
+    // extracts setUserType from context, which will globally store the selected identity for use across entire of the app
     const { setUserType } = useContext(UserContext);
-// navigates the user to the dashboard after selecting what user they are
+
+// navigates the user to the dashbord (about me home page) after selecting what user they are
     const handleButtonClick = (usertype) => {
+        // updates global state
         setUserType(usertype);
+        // stores user type in local storage to ensure it persists across page reloads
         localStorage.setItem("userType", usertype);
         navigate(`/dashboard/${usertype}`);
     };
