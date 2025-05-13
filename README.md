@@ -36,8 +36,8 @@ N/a
 
 DEPLOYED SITE: [alyssadailey.netlify.app](https://alyssadailey.netlify.app/)
 
-The Wireframe I Created During the Design Process: ![Alt text](./vite-project/public/assets/Wireframe-1.png)
-![Alt text](./vite-project/public/assets/Wireframe-2.png)
+The Wireframe I Created During the Design Process: ![Alt text](./public/assets/Wireframe-1.png)
+![Alt text](./public/assets/Wireframe-2.png)
 
 -The first page presented to the user is the home page, which displays my name. The user will click anywhere on the page to continue to the next page.
 
@@ -48,33 +48,33 @@ photo reference: ![Alt text](./public/assets/HomePage-SS.png)
 Then the user is presented with the Who's Watching page.
 This page will allow users to select the type of user they are on my site.
 
-photo reference: ![Alt text](./vite-project/public/assets/WhosWatching-SS.png)
+photo reference: ![Alt text](./public/assets/WhosWatching-SS.png)
 
 
 -Once the user has selected the type of user they are, they are presented with my About me page.
 This page displays a navbar to allow the user to select the page they would like to view on my page.
 
-photo reference: ![Alt text](./vite-project/public/assets/About-SS-1.png)
+photo reference: ![Alt text](./public/assets/About-SS-1.png)
 
 
 -The about me page contains content that allows the user to get to know me personally.
 
-photo reference: ![Alt text](./vite-project/public/assets/About-SS-2.png)
+photo reference: ![Alt text](./public/assets/About-SS-2.png)
 
 
 -The portfolio page displays my projects for the user to view.
 
-photo reference: ![Alt text](./vite-project/public/assets/Portfolio-SS-1.png)
- ![Alt text](./vite-project/public/assets/Portfolio-SS-2.png)
+photo reference: ![Alt text](./public/assets/Portfolio-SS-1.png)
+ ![Alt text](./public/assets/Portfolio-SS-2.png)
 
 -The resume page displays a button allowing the user to download and view my resume. 
 This page also displays my skills and tools that I know and use as a developer.
 
-photo reference:![Alt text](./vite-project/public/assets/Resume-SS.png)
+photo reference:![Alt text](./public/assets/Resume-SS.png)
 
 The contact me page displays a form that allows users to send me a personalized message with their name and email.
 
-photo reference: ![Alt text](./vite-project/public/assets/Contact-SS.png)
+photo reference: ![Alt text](./public/assets/Contact-SS.png)
 
 
 ## Credits
