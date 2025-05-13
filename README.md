@@ -41,7 +41,7 @@ The Wireframe I Created During the Design Process: ![Alt text](./vite-project/pu
 
 -The first page presented to the user is the home page, which displays my name. The user will click anywhere on the page to continue to the next page.
 
-photo reference: ![Alt text](./vite-project/public/assets/HomePage-SS.png)
+photo reference: ![Alt text](./public/assets/HomePage-SS.png)
 
 
 -When the user clicks, the login sound is triggered as well as added animations.
