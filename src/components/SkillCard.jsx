@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { FaDatabase, FaNodeJs, FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaNpm } from "react-icons/fa";
 
 import "../components/stylesheets/SkillCard.css";

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer";
 import SkillCard from "../components/SkillCard";
@@ -6,8 +6,9 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaBoot
 import { SiTypescript, SiExpress, SiPostgresql, SiMysql, SiVite, SiNpm } from "react-icons/si";
 import './stylesheets/Resume.css';
 
+// sets the skills into categories and sets the name and icon value of each skill
 const skills = {
-    // allows icons
+
   "Front-End Development:": [
     { name: "HTML5", icon: FaHtml5 },
     { name: "CSS3", icon: FaCss3Alt },
@@ -35,51 +36,52 @@ const skills = {
 };
 
 const Resume = () => {
-    return (
+  return (
+    <div>
+      {/* displays navbar */}
+      <Navbar />
+      {/* Resume section */}
+      <div className="resume-section">
         <div>
-            {/* displays navbar */}
-            <Navbar />
-            {/* Resume section */}
-            <div className="resume-section">
-            <div>
-            <h2 className="resume-text">Resume</h2>
-            
-            <p className="click-btn-text">Click to download my resume:</p>
-            {/* Download Resume button */}
-            <a 
-            href= "/assets/Alyssa-Resume.pdf"
-            download= "Alyssa_Dailey_Resume"
+          <h2 className="resume-text">Resume</h2>
+
+          <p className="click-btn-text">Click to download my resume:</p>
+          {/* Download Resume button */}
+          <a
+            href="/assets/Alyssa-Resume.pdf"
+            download="Alyssa_Dailey_Resume"
             class="animated-button1">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Download Resume
-            </a>
-            </div>
-            {/* Skills card section */}
-            <div className="full-skills-container">
-            <h2 className="skills-text">Skills</h2>
-            {/* Loop through skill categories */}
-            {Object.entries(skills).map(([category, skillList]) => (
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Download Resume
+          </a>
+        </div>
+        {/* Skills card section */}
+        <div className="full-skills-container">
+          <h2 className="skills-text">Skills</h2>
+          {/* Loop through skill categories- using data-driven rendering*/}
+          {Object.entries(skills).map(([category, skillList]) => (
+
             // Loop through each skill category
-          <div key={category} className="skill-category">
-            <h3 className="category-title">{category}</h3>
-      
-            <div className="skills-container">
-              {skillList.map(({name, icon}, index) => (
-                <SkillCard key={index} skill={name} Icon={icon} />
-              ))}
+            <div key={category} className="skill-category">
+              <h3 className="category-title">{category}</h3>
+              {/* displays each skill name and icon by mapping through the skillList */}
+              <div className="skills-container">
+                {skillList.map(({ name, icon }, index) => (
+                  <SkillCard key={index} skill={name} Icon={icon} />
+                ))}
+              </div>
+
             </div>
-            
-          </div>
-        ))}
+          ))}
         </div>
-        </div>
-            {/* Footer */}
-            <Footer />
-        </div>
-    );
+      </div>
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
 };
 
 export default Resume;

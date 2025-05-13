@@ -92,6 +92,7 @@ useEffect(() => {
         continueWatching: chunkProjects(shuffleArray([...projects]), 3),
     });
 }, []);
+
     return (
         <div className="portfolio-container">
             {/* displays header and nav */}

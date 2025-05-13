@@ -12,8 +12,9 @@ const userIcons = {
   Default: "/assets/Default-img.webp",
 };
 
-// ensures the correct user and icon is displayed on the navbar
+
 const Navbar = () => {
+  // ensures the correct user and icon is displayed on the navbar
   const { userType } = useContext(UserContext);
   // console.log("Navbar detected userType:", userType);
 

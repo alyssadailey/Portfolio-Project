@@ -3,160 +3,143 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import './stylesheets/Contact.css';
 
-// Creates Contact form function
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         message: "",
     });
+
     const [errors, setErrors] = useState({
         name: "",
         email: "",
         message: "",
-        "form-name": "contact",
     });
 
-    // Handles input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-
-        // Clear error when user starts typing
         setErrors({ ...errors, [name]: "" });
-        };
-    
+    };
+
     const handleBlur = (e) => {
-        const { name, value } = e.target
-        
-        // checks if field is empty
-        if(!value.trim()) {
-            setErrors({ ...errors, [name]: "This field is required"});
-        } 
-        // checks if email is valid
-        else if (name === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        const { name, value } = e.target;
+        if (!value.trim()) {
+            setErrors({ ...errors, [name]: "This field is required" });
+        } else if (name === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
             setErrors({ ...errors, email: "Please enter a valid email address" });
         }
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
+        let newErrors = {};
+        Object.keys(formData).forEach((field) => {
+            if (!formData[field].trim()) {
+                newErrors[field] = "This field is required";
+            }
+        });
 
-const handleSubmit = (e) => {
-
-    
-    e.preventDefault();
-
-    // checks if all fields are filled out
-    let newErrors = {};
-    Object.keys(formData).forEach((field) => {
-        if (!formData[field].trim()) {
-            newErrors[field] = "This field is required";
+        if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            newErrors.email = "Please enter a valid email address";
         }
-    });
 
-    // checks if email is valid
-    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-        newErrors.email = "Please enter a valid email address";
-    }
-    // if there are aditional errors, set them
-    if (Object.keys(newErrors).length > 0) {
-        setErrors(newErrors);
-        return;
-    }
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
 
-    let body = "form-name=contact&";
-    for (const field in formData) {
-       // URL encode the form data for each field
-        body += `${encodeURIComponent(field)}=${encodeURIComponent(formData[field])}&`;
-    }
-    // if no errors, alert user that message was sent
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body,
-      })
-        .then(() =>{
-            alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
-    setFormData({ name: "", email: "", message: "" });
+        const encodedData = new URLSearchParams({
+            "form-name": "contact",
+            ...formData,
+        }).toString();
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encodedData,
         })
-        .catch(error => alert(error));
+            .then(() => {
+                alert(`Thank you, ${formData.name}! Your message has been sent, and I will respond shortly!`);
+                setFormData({ name: "", email: "", message: "" });
+            })
+            .catch(error => alert(error));
+    };
 
-    
-};
+    return (
+        <div>
+            <Navbar />
+            <div className="contact-content">
+                <p className="contact-me-hook">Do you have an idea or project you’d like to bring to life?💡</p>
+                <p className="contact-me-hook">A project you would like me to colab on?🛠️</p>
+                <p className="contact-me-hook">Or just want to create a fellow software-dev friend?☕❤️</p>
 
-return (
-    <div>
-        {/* navbar */}
-        <Navbar />
-        {/* hook questions */}
-        <div className="contact-content">
-        <p className="contact-me-hook">Do you have an idea or project you’d like to bring to life?💡
-        </p>
-        <p className="contact-me-hook">
-            A project you would like me to colab on?🛠️
-            </p>
-        <p className="contact-me-hook">
-            Or just want to create a fellow software-dev friend?☕❤️
-            </p>
+                <div className="contact-container">
+                    <h1>Contact Me:</h1>
+                    <form 
+                        name="contact" 
+                        method="POST" 
+                        data-netlify="true" 
+                        onSubmit={handleSubmit} 
+                        className="contact-form"
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
 
-        {/* contact form created here */}
-        <div className="contact-container">
-        
-            <h1>Contact Me:</h1>
-            
-            {/* <p className="contact-me-direct">Please fill out all fields:</p> */}
-            <form onSubmit={handleSubmit} className="contact-form">
-            <input type="hidden" name="form-name" value={formData["form-name"]} />
-                {/* handles displaying the contact form */}
-                <div className="input-group">
-                    {/* name field */}
-                    <label>Name</label>
-                    <input 
-                            type="text" 
-                            name="name" 
-                            value={formData.name} 
-                            onChange={handleChange} 
-                            onBlur={handleBlur}
-                            required 
-                        />
-                    {errors.name && <span className="error">{errors.name}</span>}
-                 </div>
+                        <div className="input-group">
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                required
+                            />
+                            {errors.name && <span className="error">{errors.name}</span>}
+                        </div>
 
-                <div className="input-group">
-                    {/* email field */}
-                <label>Email</label>
-                        <input 
-                            type="email" 
-                            name="email" 
-                            value={formData.email} 
-                            onChange={handleChange} 
-                            onBlur={handleBlur}
-                            required 
-                        />
-                        {errors.email && <span className="error">{errors.email}</span>}
+                        <div className="input-group">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                required
+                            />
+                            {errors.email && <span className="error">{errors.email}</span>}
+                        </div>
+
+                        <div className="input-group">
+                            <label>Message</label>
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                rows="5"
+                                required
+                            ></textarea>
+                            {errors.message && <span className="error">{errors.message}</span>}
+                        </div>
+
+                        <button type="submit" className="submit-btn">Send your Message</button>
+                    </form>
                 </div>
-                {/* message field */}
-                <div className="input-group">
-                        <label>Message</label>
-                        <textarea 
-                            name="message" 
-                            value={formData.message} 
-                            onChange={handleChange} 
-                            onBlur={handleBlur}
-                            rows="5"
-                            required 
-                        ></textarea>
-                        {errors.message && <span className="error">{errors.message}</span>}
-                </div>
-                {/* submit form button */}
-                <button type="submit" className="submit-btn">Send your Message</button>
+            </div>
+
+            {/* Hidden static form for Netlify build-time detection */}
+            <form name="contact" netlify hidden>
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <textarea name="message"></textarea>
             </form>
+
+            <Footer />
         </div>
-        </div>
-        {/* footer */}
-        <Footer />
-    </div>
-);
+    );
 };
 
 export default Contact;

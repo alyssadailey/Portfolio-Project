@@ -3,11 +3,9 @@ import { useLocation } from 'react-router-dom';
 import Navbar from "./Navbar";
 import { FaPlay } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
-import './stylesheets/Navbar.css'
 import aboutVideo from "/assets/About-Video.mp4";
 import portfolioVideo from "/assets/Portfolio-Video-2.mp4";
-// import resumeVideo from "/assets/Portfolio-Video-2.mp4"
-
+import './stylesheets/Navbar.css'
 import "../components/stylesheets/Header.css";
 
 // sets the title, description, and video for each page
@@ -31,7 +29,6 @@ const Header = ({ userType }) => {
 
     const currentPageDetails = pageDetails[location.pathname] || pageDetails["/about"];
     
-
     return (
         <header className="header">
 

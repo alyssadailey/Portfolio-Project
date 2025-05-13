@@ -22,7 +22,7 @@ const HomePage = () => {
     }, 4100);
   };
   
-  // Displays my name in home page, and allows the functionality of the click to work anywhere on the page
+  // Displays my name on home page, and allows the functionality of the click to work anywhere on the page
   return (
     <div className="home-page" onClick={handleClick}>
       <h1 className={`netflix-title ${animate ? "animate-text" : ""}`}>Alyssa Dailey</h1>
@@ -30,5 +30,5 @@ const HomePage = () => {
     
   );
 };
-// exports HomePage
+
 export default HomePage;
